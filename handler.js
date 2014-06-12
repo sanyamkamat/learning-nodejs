@@ -15,7 +15,14 @@ exports.handleRequest = function (req,res){
 };
 
 function renderPage(pageName,res){
-	var contents = fs.readFileSync(pageName+".html","utf-8");
-	res.write(contents);
-	res.end();
+	var contents = 
+		fs.readFile(pageName+".html",function(err,data){
+			if(undefined == err){
+				res.writeHead(200);
+				res.end(data);
+			} else {
+				res.writeHead(500);
+				res.end("Error occured while serving the files");
+			}
+		});
 }
