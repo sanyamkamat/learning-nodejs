@@ -1,11 +1,8 @@
 var http = require("http");
-var Server =  http.createServer(handleRequest);
+var handler = require("./handler.js");
+var myModule = require("./myModule");
+var Server =  http.createServer(handler.handleRequest);
 
-function handleRequest(req,res){
-	console.log("Request received");
-	res.writeHead(200);
-	res.write("Thank you for accessing");
-	res.end();
-});
+myModule.customPrint();
 
-Server.listen(9000);
+Server.listen(9090);
