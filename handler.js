@@ -1,6 +1,11 @@
 exports.handleRequest = function (req,res){
-	console.log("Request received");
-	res.writeHead(200);
-	res.write("Thank you for accessing");
-	res.end();
+	console.log(req.url);
+	switch (req.url){
+		case "/":
+			console.log("demo");
+			res.end("correct");
+			break;
+		default:
+			res.end("Incorrect url!");		
+	}	
 };
