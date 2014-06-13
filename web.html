@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Client</title>
+	<script type="text/javascript">
+		var connection = new WebSocket('ws://localhost:9090');
+		connection.onopen = function(event) {
+			alert("opend");
+		};
+		connection.onclose = function(event) {
+			alert("closed");
+		};
+		connection.onmessage = function(message) {
+			var data = document.getElementById("history");
+			data.innerHTML = data.innerHTML+=("<li>" + message.data+"</li>");
+		};
+		function sendData () {
+			if(event.keyCode == 13){
+				if(document.getElementById("chat").value!="") {
+					connection.send(document.getElementById("chat").value);
+					document.getElementById("chat").value="";
+					document.getElementById("chat").focus();
+				}
+			}
+			// body...
+		}
+	</script>
+</head>
+<body>
+<input id="chat" onkeypress="sendData()"/>
+<div id="history" style="border: 1px solid;height: 400px" ></div>
+</body>
+</html>
