@@ -1,0 +1,13 @@
+{
+  "author": {
+    "name": "Sanyam Kamat"
+  },
+  "name": "simple_framework",
+  "description": "simple to use, blazing fast and thoroughly tested websocket client, server and console for node.js, up-to-date against RFC-6455",
+  "version": "0.0.0",
+  "dependencies": {
+    "fs": "0.0.1",
+    "handlebars": "^2.0.0-alpha.4",
+    "nconf": "^0.6.9"
+  }
+}

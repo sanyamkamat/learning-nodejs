@@ -1,0 +1,10 @@
+{
+	"httpport": "9090",
+	"welcome": "./views/welcome.html",
+	"aboutus": "./views/aboutus.html",
+	"chat": "./views/chat.html",
+	"history": "./views/history.html",
+	"logout": "./views/logout.html",
+	"register": "./views/register.html",
+	"errorpage": "./views/error.html"
+}
