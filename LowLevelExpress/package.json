@@ -5,6 +5,7 @@
   "name": "LowLevelExpress",
   "version": "0.0.0",
   "dependencies": {
+    "consolidate": "^0.10.0",
     "express": "^4.4.3"
   }
 }
