@@ -1,0 +1,10 @@
+{
+  "author": {
+    "name": "Sanyam Kamat"
+  },
+  "name": "LowLevelExpress",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "^4.4.3"
+  }
+}
