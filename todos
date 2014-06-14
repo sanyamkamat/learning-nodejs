@@ -1,0 +1,3 @@
+install
+	express connect mongodb querystring expect nodeunit cluster handlebars cluster handlebars nconf ws
+	 express-generator	-g
